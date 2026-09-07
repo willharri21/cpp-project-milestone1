@@ -21,10 +21,10 @@ A command-line task manager built in C++ as a continuous project for Project & P
 
 ### Week 1
 
-⚙️ **Overview** – Set up my GitHub repository, built a Visual Studio C++ console project, and implemented a task manager with add/list functionality split into a Task struct and TaskManager class.
+⚙️ **Overview** – Set up my GitHub repository and Visual Studio project, then built a command-line task manager in C++. Split the code from a single file into a proper class structure (a `Task` struct plus a `TaskManager` class) with add-task and list-task functionality, organized into a `dev` folder as required.
 
-🌵 **Challenges** – [Replace with your actual challenges, e.g. "Getting Visual Studio's project files to line up with my repo's dev folder took some trial and error."]
+🌵 **Challenges** – Git and GitHub Desktop gave me more trouble than the C++ itself. I ran into a `.gitignore` file that got saved without its leading period so it wasn't actually being recognized, committed straight to `main` before realizing I needed a `dev` branch, and at one point my new source files got swept into a stash when switching branches and didn't show up right away. I also hit a "can't find repository" error from GitHub Desktop after OneDrive lost track of the folder's location. Working through each of these taught me a lot about how Git actually tracks changes versus what's just sitting in my file system.
 
-🏆 **Accomplishments** – [Replace with what you learned, e.g. "Learned how to split single-file C++ code into separate header/implementation files and organize a class properly."]
+🏆 **Accomplishments** – Leveled up on organizing C++ code into separate header/implementation files instead of dumping everything into one file, and got much more comfortable with Git branches, stashes, and diagnosing why GitHub Desktop wasn't showing what I expected. Also learned to always double check my commit history before assuming something was saved.
 
-🔮 **Next Steps** – [Replace with your plan, e.g. "Add task completion and delete functionality, and start persisting tasks to a file."]
+🔮 **Next Steps** – Add functionality to mark tasks complete and delete tasks, and start looking into saving/loading the task list from a file so data persists between runs. Going forward I want to commit more incrementally as I code, rather than in one batch at the end.
