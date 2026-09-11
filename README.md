@@ -28,3 +28,27 @@ A command-line task manager built in C++ as a continuous project for Project & P
 🏆 **Accomplishments** – Leveled up on organizing C++ code into separate header/implementation files instead of dumping everything into one file, and got much more comfortable with Git branches, stashes, and diagnosing why GitHub Desktop wasn't showing what I expected. Also learned to always double check my commit history before assuming something was saved.
 
 🔮 **Next Steps** – Add functionality to mark tasks complete and delete tasks, and start looking into saving/loading the task list from a file so data persists between runs. Going forward I want to commit more incrementally as I code, rather than in one batch at the end.
+bash
+
+cat << 'EOF'
+### Week 2
+
+⚙️ **Overview** – Built on the Task Manager from Milestone 1 by adding mark-complete and delete functionality to the `TaskManager` class, along with input validation on the main menu so non-numeric input no longer crashes the program. Updated my documentation with a Milestone 2 changelog and kept my GitHub Issues and Project Board in sync with the actual work as I did it.
+
+🌵 **Challenges** – Ran into a couple of Git snags again this week — Visual Studio showed my project files as locked/read-only after some file operations, which blocked me from saving changes until I cleared the read-only attribute on the whole folder. I also had a change get swept into a stash again during a branch operation, so I'm getting more careful about checking for stashes before assuming something wasn't saved.
+
+🏆 **Accomplishments** – Got real practice using `std::find_if` from the `<algorithm>` library to locate a task by ID instead of writing a manual loop, and leveled up on handling `std::cin` failure states properly for input validation instead of just hoping the user types the right thing.
+
+🔮 **Next Steps** – Apply the same input validation pattern to task ID entry (right now only the main menu choice is protected), and start looking at task editing and file-based save/load so tasks persist between runs.
+EOF
+Output
+
+### Week 2
+
+⚙️ **Overview** – Built on the Task Manager from Milestone 1 by adding mark-complete and delete functionality to the `TaskManager` class, along with input validation on the main menu so non-numeric input no longer crashes the program. Updated my documentation with a Milestone 2 changelog and kept my GitHub Issues and Project Board in sync with the actual work as I did it.
+
+🌵 **Challenges** – Ran into a couple of Git snags again this week — Visual Studio showed my project files as locked/read-only after some file operations, which blocked me from saving changes until I cleared the read-only attribute on the whole folder. I also had a change get swept into a stash again during a branch operation, so I'm getting more careful about checking for stashes before assuming something wasn't saved.
+
+🏆 **Accomplishments** – Got real practice using `std::find_if` from the `<algorithm>` library to locate a task by ID instead of writing a manual loop, and leveled up on handling `std::cin` failure states properly for input validation instead of just hoping the user types the right thing.
+
+🔮 **Next Steps** – Apply the same input validation pattern to task ID entry (right now only the main menu choice is protected), and start looking at task editing and file-based save/load so tasks persist between runs.
