@@ -1,37 +1,59 @@
-# 🥊 Project BallKnowledge
+# 🚀 Welcome to Project & Portfolio!
 
-A console-based reference system for fighting game tips, tricks, terminology, and frame data — built to scale across as many games and characters as I can add over time, from ArcSys and Capcom to SNK, Aether Studios, NRS, and beyond.
+This repository will be used to keep track of research and development conducted in this class. Follow the instructions below to get started.
+cos
+### Getting Started
 
-## What It Does
+**1.** Review the [About](./docs/01_about/README.md) README and all of the links it provides.
 
-Pick a game, pick a character, and pull up their moves with startup/active/endlag frame data plus usage notes and matchup tips — all from the console.
+**2.** Review the documentation and [Getting Started](./docs/02_getting_started/README.md) steps in this repository's docs folder.
 
-## How to Run
+**3.** Attend the first Live Lecture to see a live setup demo. If you are unable to attend, make sure to watch the archive.
 
-1. Open `dev/main.cpp` in Visual Studio, or compile directly:
-   `g++ dev/main.cpp dev/Character.cpp dev/Game.cpp -o app`
-2. Build and run
-3. Choose a character from the menu to view their frame data
+### Next Steps...
 
-## Project Structure
+After completing the above steps, feel free to begin updating this readme where indicated below. Remember to update this document each week to receive proper credit for the weekly Milestone assignment.
 
-- `dev/Move.h` — struct for a single move's frame data and notes
-- `dev/Character.h` / `dev/Character.cpp` — a character and their moveset
-- `dev/Game.h` / `dev/Game.cpp` — a game and its roster of characters
-- `dev/main.cpp` — builds the current game/character data and runs the menu
-- `docs/` — course documentation and assignment write-ups
+<br>
 
-## Currently Loaded
+> ❗️ &nbsp; Now that you have read to this point, go ahead and delete this sentence and everything above it.
 
-**Rivals of Aether 2** (Aether Studios)
-- Ranno — Jab 1, Back Air
-- Clairen — Forward Tilt, Neutral Special
+<br>
 
-## Planned Expansion
+# Project & Portfolio 1
 
-- More characters and moves per game
-- Additional games (Guilty Gear, Street Fighter, King of Fighters, etc.)
-- A universal glossary system for fighting game lingo (meaty, oki, whiff punish, etc.)
-- A "cheese strategies" section for mode-specific tips and shortcuts
+### Student First & Last Name
 
-⚠️ Frame data is community-sourced and tied to specific game patches — always worth double-checking against current patch notes before treating it as exact.
+Hello my name is [enter name]. I am a student from [where are you from?]. The purpose of this repository is to practice development using version control. This work will help me begin to build a portfolio of skills and accomplishment that can be shared in the future.
+
+<br>
+
+## 📢 &nbsp; Weekly Stand Up
+
+Each week I will summarize my milestone activity and progress by writing a stand-up. A stand-up is meant to be a succinct update on how things are going. Use these prompts as a guide on what to write about:
+
+⚙️ Overview - What I worked on this past week
+<br>
+🌵 Challenges - What problems did I have & how I'm addressing them
+<br>
+🏆 Accomplishments - What is something I "leveled up" on this week
+<br>
+🔮 Next Steps - What I plan to prioritize and do next
+
+<br>
+
+### Week 1
+
+Replace this paragraph with your stand up for this week. Use the prompts above to summarize your most recent milestone activity and work.
+
+### Week 2
+
+My next stand up will go here...
+
+### Week 3
+
+Stay tuned, this stand up is coming soon...
+
+### Week 4
+
+My final stand up...
