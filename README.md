@@ -1,59 +1,54 @@
-# 🚀 Welcome to Project & Portfolio!
+# 🥊 Project BallKnowledge
 
-This repository will be used to keep track of research and development conducted in this class. Follow the instructions below to get started.
-cos
-### Getting Started
+A console-based reference system for fighting game tips, tricks, terminology, and frame data — built to scale across as many games and characters as I can add over time, from ArcSys and Capcom to SNK, Aether Studios, NRS, and beyond.
 
-**1.** Review the [About](./docs/01_about/README.md) README and all of the links it provides.
+## What It Does
 
-**2.** Review the documentation and [Getting Started](./docs/02_getting_started/README.md) steps in this repository's docs folder.
+Pick from the main menu to either browse a game's roster for character frame data, or look up general fighting-game terminology in the glossary — all from the console.
 
-**3.** Attend the first Live Lecture to see a live setup demo. If you are unable to attend, make sure to watch the archive.
+## How to Run
 
-### Next Steps...
+1. Open `dev/main.cpp` in Visual Studio (or compile directly with `g++ dev/main.cpp dev/Character.cpp dev/Game.cpp dev/Glossary.cpp -o app`)
+2. Build and run
+3. Choose an option from the main menu: Browse Characters or View Glossary
 
-After completing the above steps, feel free to begin updating this readme where indicated below. Remember to update this document each week to receive proper credit for the weekly Milestone assignment.
+## Project Structure
+
+- `dev/Move.h` — struct for a single move's frame data and notes
+- `dev/Character.h` / `dev/Character.cpp` — a character and their moveset
+- `dev/Game.h` / `dev/Game.cpp` — a game and its roster of characters
+- `dev/GlossaryTerm.h` — struct for a single glossary term, definition, and example
+- `dev/Glossary.h` / `dev/Glossary.cpp` — collection of general fighting-game terminology
+- `dev/main.cpp` — builds the current game/character/glossary data and runs the menus
+- `docs/` — course documentation and assignment write-ups
+
+## Currently Loaded
+
+**Rivals of Aether 2** (Aether Studios)
+- Ranno — Jab 1, Back Air
+- Clairen — Forward Tilt, Neutral Special
+
+**Glossary** — 4 starter terms: Wavedash, Whiff Punish, Floorhugging, IASA
+
+## Planned Expansion
+
+- More characters and moves per game
+- Additional games (Guilty Gear, Street Fighter, King of Fighters, etc.)
+- A "cheese strategies" section for mode-specific tips and shortcuts
+- A search feature to look up moves/terms by keyword instead of only browsing menus
+
+⚠️ Frame data is community-sourced and tied to specific game patches — always worth double-checking against current patch notes before treating it as exact.
 
 <br>
 
-> ❗️ &nbsp; Now that you have read to this point, go ahead and delete this sentence and everything above it.
-
-<br>
-
-# Project & Portfolio 1
-
-### Student First & Last Name
-
-Hello my name is [enter name]. I am a student from [where are you from?]. The purpose of this repository is to practice development using version control. This work will help me begin to build a portfolio of skills and accomplishment that can be shared in the future.
-
-<br>
-
-## 📢 &nbsp; Weekly Stand Up
-
-Each week I will summarize my milestone activity and progress by writing a stand-up. A stand-up is meant to be a succinct update on how things are going. Use these prompts as a guide on what to write about:
-
-⚙️ Overview - What I worked on this past week
-<br>
-🌵 Challenges - What problems did I have & how I'm addressing them
-<br>
-🏆 Accomplishments - What is something I "leveled up" on this week
-<br>
-🔮 Next Steps - What I plan to prioritize and do next
-
-<br>
-
-### Week 1
-
-Replace this paragraph with your stand up for this week. Use the prompts above to summarize your most recent milestone activity and work.
+## 📢 Weekly Stand Up
 
 ### Week 2
 
-My next stand up will go here...
+⚙️ **Overview** – Started a new project this week, Project BallKnowledge — a console-based reference system for fighting game frame data, terminology, and strategy tips. Built the core class structure (`Move`, `Character`, `Game`) with real starter data for two Rivals of Aether 2 characters, then added a `GlossaryTerm`/`Glossary` system with a top-level menu so users can browse characters or look up general terminology.
 
-### Week 3
+🌵 **Challenges** – While testing, I found a real bug in my menu-input validation: when `std::cin` fails to read a number, it automatically sets the variable to `0` as of C++11, which was silently matching my "Exit" condition and quitting the program on any bad input. Fixed it by resetting the choice to a non-zero sentinel value after catching a failed read.
 
-Stay tuned, this stand up is coming soon...
+🏆 **Accomplishments** – Practiced building a second, independent data hierarchy (Glossary) alongside my existing Game/Character/Move structure, and got direct experience with a subtle C++11 behavior change around failed stream extraction that I hadn't run into before.
 
-### Week 4
-
-My final stand up...
+🔮 **Next Steps** – Add the "cheese strategies" section, expand the character roster and glossary term list, and build a basic search feature across moves and glossary terms.
