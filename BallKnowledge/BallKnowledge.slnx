@@ -1,0 +1,7 @@
+<Solution>
+  <Configurations>
+    <Platform Name="x64" />
+    <Platform Name="x86" />
+  </Configurations>
+  <Project Path="BallKnowledge/BallKnowledge.vcxproj" Id="6d090e11-9e42-482a-b3cb-c3c55a20abb8" />
+</Solution>
