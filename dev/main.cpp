@@ -1,9 +1,43 @@
 #include <iostream>
+#include <string>
+#include <stdexcept>
 #include "Game.h"
 #include "Character.h"
 #include "Move.h"
 #include "Glossary.h"
 #include "GlossaryTerm.h"
+
+// Reads a full line and converts it to an int using stoi, wrapped in
+// try/catch. Keeps re-prompting until the user enters a valid whole number.
+// Replaces the old cin.fail()-based validation used in every menu.
+int getValidatedInt(const std::string& prompt) {
+    std::string line;
+
+    while (true) {
+        std::cout << prompt;
+        std::getline(std::cin, line);
+
+        try {
+            size_t pos = 0;
+            int value = std::stoi(line, &pos);
+
+            // Make sure the ENTIRE line was consumed as the number,
+            // so input like "3abc" doesn't silently become 3.
+            if (pos != line.size()) {
+                std::cout << "That's not a valid whole number. Try again.\n";
+                continue;
+            }
+
+            return value;
+        } catch (const std::invalid_argument&) {
+            // No conversion could be performed (e.g. "abc", empty input)
+            std::cout << "That's not a valid whole number. Try again.\n";
+        } catch (const std::out_of_range&) {
+            // Number is too large/small to fit in an int
+            std::cout << "That number's too large. Try again.\n";
+        }
+    }
+}
 
 // Builds Rivals of Aether 2 with a couple of starter characters and moves.
 // Frame data is approximate/community-sourced and should be re-verified
@@ -66,16 +100,8 @@ void runCharacterMenu(Game& game) {
     while (choice != 0) {
         game.listCharacters();
         std::cout << "0. Back to main menu\n";
-        std::cout << "Choose a character to view their moves: ";
-        std::cin >> choice;
 
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(10000, '\n');
-            std::cout << "That's not a valid number. Try again.\n";
-            choice = -1; // avoid the 0-on-fail value being mistaken for "Exit"
-            continue;
-        }
+        choice = getValidatedInt("Choose a character to view their moves: ");
 
         if (choice == 0) {
             break;
@@ -96,16 +122,8 @@ void runGlossaryMenu(Glossary& glossary) {
     while (choice != 0) {
         glossary.listTerms();
         std::cout << "0. Back to main menu\n";
-        std::cout << "Choose a term to view its definition: ";
-        std::cin >> choice;
 
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(10000, '\n');
-            std::cout << "That's not a valid number. Try again.\n";
-            choice = -1; // avoid the 0-on-fail value being mistaken for "Exit"
-            continue;
-        }
+        choice = getValidatedInt("Choose a term to view its definition: ");
 
         if (choice == 0) {
             break;
@@ -127,16 +145,8 @@ int main() {
         std::cout << "\n1. Browse Characters (" << roa2.getTitle() << ")\n";
         std::cout << "2. View Glossary\n";
         std::cout << "0. Exit\n";
-        std::cout << "Choose an option: ";
-        std::cin >> choice;
 
-        if (std::cin.fail()) {
-            std::cin.clear();
-            std::cin.ignore(10000, '\n');
-            std::cout << "That's not a valid number. Try again.\n";
-            choice = -1; // avoid the 0-on-fail value being mistaken for "Exit"
-            continue;
-        }
+        choice = getValidatedInt("Choose an option: ");
 
         if (choice == 1) {
             runCharacterMenu(roa2);
