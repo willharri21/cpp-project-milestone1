@@ -143,13 +143,17 @@
     <ClCompile Include="..\..\dev\Game.cpp" />
     <ClCompile Include="..\..\dev\Glossary.cpp" />
     <ClCompile Include="..\..\dev\main.cpp" />
+    <ClCompile Include="..\..\dev\Slang.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\dev\Character.h" />
+    <ClInclude Include="..\..\dev\CheeseStrategy.h" />
     <ClInclude Include="..\..\dev\Game.h" />
     <ClInclude Include="..\..\dev\Glossary.h" />
     <ClInclude Include="..\..\dev\GlossaryTerm.h" />
     <ClInclude Include="..\..\dev\Move.h" />
+    <ClInclude Include="..\..\dev\Slang.h" />
+    <ClInclude Include="..\..\dev\SlangTerm.h" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

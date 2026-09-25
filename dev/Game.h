@@ -4,11 +4,11 @@
 #include <string>
 #include <vector>
 #include "Character.h"
+#include "CheeseStrategy.h"
 
-// Represents a fighting game and its roster
 class Game {
 public:
-    Game(const std::string& title, const std::string& publisher);
+    Game(const std::string& gameTitle, const std::string& gamePublisher);
 
     void addCharacter(const Character& character);
     void listCharacters() const;
@@ -16,10 +16,15 @@ public:
     int characterCount() const;
     const std::string& getTitle() const;
 
+    void addCheeseStrategy(const CheeseStrategy& strategy);
+    void listCheeseStrategies() const;
+    void showCheeseStrategy(int index) const;
+
 private:
     std::string title;
     std::string publisher;
     std::vector<Character> characters;
+    std::vector<CheeseStrategy> cheeseStrategies;
 };
 
 #endif

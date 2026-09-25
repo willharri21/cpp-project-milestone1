@@ -5,18 +5,16 @@
 #include <vector>
 #include "Move.h"
 
-// Represents a playable character and their moveset
 class Character {
 public:
-    Character(const std::string& name, const std::string& archetype);
-
+    Character(const std::string& characterName, const std::string& characterArchetype);
     void addMove(const Move& move);
     void listMoves() const;
     const std::string& getName() const;
 
 private:
     std::string name;
-    std::string archetype; // e.g. "Speedy zoner", "Disjoint-heavy swordsman"
+    std::string archetype;
     std::vector<Move> moves;
 };
 
