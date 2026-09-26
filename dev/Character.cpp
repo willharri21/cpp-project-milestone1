@@ -1,8 +1,8 @@
 #include <iostream>
 #include "Character.h"
 
-Character::Character(const std::string& name, const std::string& archetype)
-    : name(name), archetype(archetype) {
+Character::Character(const std::string& characterName, const std::string& characterArchetype)
+    : name(characterName), archetype(characterArchetype) {
 }
 
 void Character::addMove(const Move& move) {
@@ -15,12 +15,10 @@ const std::string& Character::getName() const {
 
 void Character::listMoves() const {
     std::cout << "\n=== " << name << " (" << archetype << ") ===\n";
-
     if (moves.empty()) {
         std::cout << "No moves logged yet.\n";
         return;
     }
-
     for (size_t i = 0; i < moves.size(); ++i) {
         const Move& m = moves[i];
         std::cout << (i + 1) << ". " << m.name << " [" << m.input << "]\n";
